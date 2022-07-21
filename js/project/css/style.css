@@ -1,0 +1,14 @@
+@import url(reset.css);
+.grid{
+    display: grid;
+    background-color: #000000;
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+}
+.inline-grid{
+    display: -ms-inline-grid;
+    background-color: #000000;
+    width: 300px;
+    height: 300px;
+}
