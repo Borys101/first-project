@@ -131,9 +131,27 @@
 // console.log(text.slice(3, 6));
 
 
-let prep = 10;
-let prop = 10;
-console.log(prep++);
-console.log(prop--);
-console.log(prep);
-console.log(prop);
+// let prep = 10;
+// let prop = 10;
+// console.log(prep++);
+// console.log(prop--);
+// console.log(prep);
+// console.log(prop);
+
+
+const numberOfFilms = +prompt('How many films did you watch?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+};
+const nameOfFilm = prompt('What film did you watch last?', ''),
+      markOfFilm = +prompt('Which mark do you put?', ''),
+      nameOfFilm2 = prompt('What film did you watch last?', ''),
+      markOfFilm2 = +prompt('Which mark do you put to second film?', '');
+personalMovieDB.movies[nameOfFilm] = markOfFilm;
+personalMovieDB.movies[nameOfFilm2] = markOfFilm2;
+console.log(personalMovieDB);
+
