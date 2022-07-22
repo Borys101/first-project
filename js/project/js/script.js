@@ -147,11 +147,79 @@ const personalMovieDB = {
     genres: [],
     privat: false,
 };
-const nameOfFilm = prompt('What film did you watch last?', ''),
-      markOfFilm = +prompt('Which mark do you put?', ''),
-      nameOfFilm2 = prompt('What film did you watch last?', ''),
-      markOfFilm2 = +prompt('Which mark do you put to second film?', '');
-personalMovieDB.movies[nameOfFilm] = markOfFilm;
-personalMovieDB.movies[nameOfFilm2] = markOfFilm2;
+for (let i = 0; i < 2; i++) {
+   const nameOfFilm = prompt('What film did you watch last?', ''),
+         markOfFilm = +prompt('Which mark do you put?', '');
+   if (nameOfFilm != '' && markOfFilm != '' && nameOfFilm != null && markOfFilm != null && nameOfFilm.length < 50) {
+      personalMovieDB.movies[nameOfFilm] = markOfFilm;
+      console.log('done');
+   } else {
+      console.log('error');
+      i--;
+   } 
+}
 console.log(personalMovieDB);
 
+
+// const number = 51;
+// if (number > 56) {
+//     console.log('False');
+// } else if (number == 52) {
+//     console.log('False');
+// } else {
+//     console.log('True');
+// }
+
+// (number > 51) ? console.log('False') : console.log('True');
+
+
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
+ 
+// if (hamburger && cola || fries === 3 && nuggets) {
+//    console.log('Done!')
+// }
+
+
+
+
+
+// let result = '';
+// const lenght = 7;
+// for (let i = 1; i < lenght; i++) {
+//    for (let j = 0; j < i, j++;) {
+//       result += '✧';
+//    }
+//    result += '\n';
+// }
+// console.log(result);
+
+// var lines = 7;
+// var str = " ";
+// var star = "*";
+// for (var i = 0; i < lines; i++) {
+//   str += star;
+//   console.log(str);
+// }
+
+// let i = 2;
+// while (i <= 16) {
+//    if (i % 2 === 0) {
+//       i++;
+//       continue;
+//    } else {
+//       console.log(i);
+//    }
+//    ++i;
+// }
+
+
+
+// const data = [5, 10, 'Shopping', 20, 'Homework'];
+// const result = [];
+// for (let i = 1; i <= data.length; i++) {
+//    result[i - 1] = data[data.length - i];
+// }
+// console.log(result);
