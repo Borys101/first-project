@@ -139,26 +139,26 @@
 // console.log(prop);
 
 
-const numberOfFilms = +prompt('How many films did you watch?', '');
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false,
-};
-for (let i = 0; i < 2; i++) {
-   const nameOfFilm = prompt('What film did you watch last?', ''),
-         markOfFilm = +prompt('Which mark do you put?', '');
-   if (nameOfFilm != '' && markOfFilm != '' && nameOfFilm != null && markOfFilm != null && nameOfFilm.length < 50) {
-      personalMovieDB.movies[nameOfFilm] = markOfFilm;
-      console.log('done');
-   } else {
-      console.log('error');
-      i--;
-   } 
-}
-console.log(personalMovieDB);
+// const numberOfFilms = +prompt('How many films did you watch?', '');
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false,
+// };
+// for (let i = 0; i < 2; i++) {
+//    const nameOfFilm = prompt('What film did you watch last?', ''),
+//          markOfFilm = +prompt('Which mark do you put?', '');
+//    if (nameOfFilm != '' && markOfFilm != '' && nameOfFilm != null && markOfFilm != null && nameOfFilm.length < 50) {
+//       personalMovieDB.movies[nameOfFilm] = markOfFilm;
+//       console.log('done');
+//    } else {
+//       console.log('error');
+//       i--;
+//    } 
+// }
+// console.log(personalMovieDB);
 
 
 // const number = 51;
@@ -223,3 +223,79 @@ console.log(personalMovieDB);
 //    result[i - 1] = data[data.length - i];
 // }
 // console.log(result);
+
+
+// let result = '';
+// for (i = 1; i < 7; i++) {
+//    result += '*';
+//    console.log(result);
+// }
+
+
+// let arr = [10, 20, 30, 50, 235, 3000];
+// for (let i = 0; i < arr.length; i++) {
+//    let num = String(arr[i]);
+//    let char = num[0];
+//    if (char == 1 || char == 2 || char == 5) {
+//       console.log(arr[i]);
+//    }
+// }
+
+// let result = '';
+// for (let i = 1; i < 7; i++) {
+//    result += '*';
+//    console.log(result);
+// }
+
+
+// function getMathResult(num, times) {
+//    if (typeof(times) !== 'number' || times <= 0) {
+//        return num;
+//    }
+
+//    let str = '';
+
+//    for (let i = 1; i <= times; i++) {
+//        if (i === times) {
+//            str += `${num * i}`;
+//            // Тут без черточек в конце
+//        } else {
+//            str += `${num * i}---`;
+//            // Это тоже самое, что и
+//            // str = str + num * i + "---"
+//        }
+//    }
+
+//    return str;
+// }
+
+Даны размер ипотечного кредита (S — 2 млн.руб), процентная ставка (p  — 10%), кол-во лет (years — 5). Н
+айти переплату по кредиту, значение переплаты должно содержаться в переменной perepl.
+
+let s = 2000000;
+let p = 10;
+let years = 5;
+let perep1;
+perep1 = s + (s / 100 * 10) * 5;
+console.log(perep1)
+
+function credit(s, years) {
+   let p = 10;
+   let perep1;
+   perep1 = s + (s / 100 * p) * years;
+   console.log(perep1);
+}
+credit(1000000, 3);
+
+
+Напишите функцию hello2(), которая при вызове будет принимать переменную name 
+(например, «Василий») и выводить строку (в нашем случае «Привет, Василий»).  
+В случае отсутствующего аргумента выводить «Привет, гость»
+function hello2(name) {
+   if (name) {
+      console.log(`Hello, ${name}`);
+   } else {
+      console.log('Hello, visiter!');
+   }
+}
+hello2('Alex');
