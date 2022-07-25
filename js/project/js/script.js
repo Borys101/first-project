@@ -269,33 +269,175 @@
 //    return str;
 // }
 
-Даны размер ипотечного кредита (S — 2 млн.руб), процентная ставка (p  — 10%), кол-во лет (years — 5). Н
-айти переплату по кредиту, значение переплаты должно содержаться в переменной perepl.
+// Даны размер ипотечного кредита (S — 2 млн.руб), процентная ставка (p  — 10%), кол-во лет (years — 5). Н
+// айти переплату по кредиту, значение переплаты должно содержаться в переменной perepl.
 
-let s = 2000000;
-let p = 10;
-let years = 5;
-let perep1;
-perep1 = s + (s / 100 * 10) * 5;
-console.log(perep1)
+// let s = 2000000;
+// let p = 10;
+// let years = 5;
+// let perep1;
+// perep1 = s + (s / 100 * 10) * 5;
+// console.log(perep1)
 
-function credit(s, years) {
-   let p = 10;
-   let perep1;
-   perep1 = s + (s / 100 * p) * years;
-   console.log(perep1);
+// function credit(s, years) {
+//    let p = 10;
+//    let perep1;
+//    perep1 = s + (s / 100 * p) * years;
+//    console.log(perep1);
+// }
+// credit(1000000, 3);
+
+
+// Создайте функцию avg() , которая будет находить среднее значение по всем своим аргументам (аргументы величины числовые)
+// function avg(arg1, arg2, arg3, arg4) {
+//    result = (arg1 + arg2 + arg3 + arg4) / avg.length;
+//    console.log(result);
+// }
+// avg(1, 2, 3, 4);
+
+
+// function calculateVolumeAndArea(length) {
+//    if (typeof(length) != 'number' || length % 1 != 0 || length < 0) {
+//       console.log('При вычислении произошла ошибка');
+//    } else {
+//       let V = length * length * length;
+//       let S = 6 * (length * length);
+//       console.log(`Объём куба: ${V}, площадь всей поверхности: ${S}`);
+//    }
+// }
+
+// calculateVolumeAndArea(5);
+
+
+// function getCoupeNumber(seats) {
+//    if (typeof(seats) != 'number' || seats % 1 != 0 || seats < 0) {
+//       return'Ошибка. Проверьте правильность введенного номера места';
+//    } else if (seats == 0 || seats > 36) {
+//       return'Таких мест в вагоне не существует';
+//    }
+//    for (let i = 4; i <= 36; i += 4) {
+//       if (seats <= i)
+//          return Math.ceil(i / 4);
+//          break;
+//    }
+// }
+// getCoupeNumber(4);
+
+// function getCoupeNumber(seatNumber) {
+//    if (typeof(seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+//        console.log("Ошибка. Проверьте правильность введенного номера места");
+//    }
+
+//    if (seatNumber === 0 || seatNumber > 36) {
+//        console.log("Таких мест в вагоне не существует");
+//    }
+
+//    for (let i = 4; i <= 36; i = i + 4) {
+//        if (seatNumber <= i) {
+//            console.log(Math.ceil(i / 4));
+//            break;
+//        }
+//    }
+//    // тут очень много вариантов решения, но выбрал один из элегантных :)
+// }
+
+// getCoupeNumber(36);
+
+// function getTimeFromMinutes(minutes) {
+//    if (typeof(minutes) !== 'number' || minutes < 0 || !Number.isInteger(minutes) || minutes <= 600) {
+//       console.log("Ошибка. Проверьте данные");
+//    }
+//    const resultHours = Math.floor(minutes / 60);
+//    const resultMinutes = minutes % 60;
+//    let hoursStr;
+//    switch (resultHours) {
+//       case 0:
+//          hoursStr = 'часов';
+//          break;
+//       case 1:
+//          hoursStr = 'час';
+//          break;
+//       case 2:
+//       case 3: 
+//       case 4:
+//          hoursStr = 'часа';
+//          break;
+//       default:
+//          hoursStr = 'часов';
+//          break;
+//    }
+//    console.log(`Это ${resultHours} ${hoursStr} и ${resultMinutes} минут`)
+// }
+// getTimeFromMinutes(105);
+
+
+// function findMaxNumber(num1, num2, num3, num4) {
+//    if (typeof(num1) !== 'number' || 
+//       typeof(num2) !== 'number' || 
+//       typeof(num3) !== 'number' || 
+//       typeof(num4) !== 'number') {
+//          console.log(0);
+//    } else {
+//       console.log(Math.max(num1, num2, num3, num4));
+//    }
+// }
+// findMaxNumber(1, 2, 3);
+
+
+
+// Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. 
+// С помощью цикла for создайте строку '-1-2-3-4-5-6-7-8-9-'.
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let result = '';
+// for (let i = 0; i < arr.length; i++) {
+//     if (i === arr.length - 1) {
+//         result += `-${arr[i]}-`;
+//     } else {
+//         result += `-${arr[i]}`;
+//     }
+// }
+// console.log(result);
+
+// В бесконечном цикле делается запрос на ввод двух чисел 
+// (два отдельных вызова функции prompt()). Числа сравниваются между собой, 
+// и выводится одна из трёх фраз: «числа равны», «первое число меньше», 
+// «второе число меньше». Если пользователь ввёл не число, выводится фраза 
+// «первый ввод – 
+// не число» (или «второй ввод – не число»), и выполнение скрипта прекращается.
+
+// Нужно написать цикл, который перебирает числа от 4 до 37 и выполняет следующие 
+// действия:
+
+// Если число кратно 2, но не кратно 4, то прибавляет его к результату;
+// Если число кратно 3, то отнимает его от результата;
+// Если число кратно 4, то умножает его на результат;
+// Если число кратно 5, то просто выводит в консоль это число и не изменяет 
+// результат (даже если число подпадает под условия выше);
+// Если число не попадает под условия выше, то пропускает его.
+
+// const obj = {
+//     name: 'Borys',
+//     width: 1024,
+//     height: 1024,
+//     color: {
+//         border: 'black',
+//         bg: 'red'
+//     }
+// };
+
+// for (let key in obj) {
+//     if (typeof(obj[key]) === 'object') {
+//         for (let i in obj[key]) {
+//             console.log(`Свойство ${i} имеет значение ${obj[key][i]}`);
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${obj[key]}`);
+//     }
+// }
+
+const arr = [1, 422, 36, 4];
+function sortFunction (a, b) {
+    return a-b;
 }
-credit(1000000, 3);
-
-
-Напишите функцию hello2(), которая при вызове будет принимать переменную name 
-(например, «Василий») и выводить строку (в нашем случае «Привет, Василий»).  
-В случае отсутствующего аргумента выводить «Привет, гость»
-function hello2(name) {
-   if (name) {
-      console.log(`Hello, ${name}`);
-   } else {
-      console.log('Hello, visiter!');
-   }
-}
-hello2('Alex');
+arr.sort(sortFunction);
