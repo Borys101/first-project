@@ -436,8 +436,320 @@
 //     }
 // }
 
-const arr = [1, 422, 36, 4];
-function sortFunction (a, b) {
-    return a-b;
-}
-arr.sort(sortFunction);
+//! const arr = [1, 422, 36, 4];
+//! const sorted = arr.slice().sort((a, b) => a - b);
+
+//! console.log({arr, sorted});
+
+//! const alphabet = 'ёйцукенгшщзхъфывапролджэячсмитьбю'.split('');
+//! const collatore = new Intl.Collator('ru-RU');
+//! console.log(alphabet.sort(collatore.compare));
+
+// const video = ['youtube', 'twitch', 'rutube'],
+//       blogs = ['wordpress', 'livelaunch'],
+//       internet = [...video, ...blogs, 'netflix', 'megogo'];
+// console.log(internet);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// const arr = [2, 5, 7];
+// log(...arr);
+
+// Описание задачи: 
+// Напишите функцию, которая заполняет новый массив предоставленным 
+// значением.
+//   * Ожидаемый результат: (3, 'a') => ['a', 'a', 'a']
+
+// let mainArr = [];
+// function arr(num, symbol) {
+//     if (num > 0) {
+//         for (let i = 0; i < num; i++) {
+//             mainArr[i] = symbol;
+//         } 
+//     } else {
+//             mainArr = ['Массив пуст'];
+//     }
+//     console.log(mainArr);
+// }
+// arr(2, 'a');
+
+
+// Описание задачи: Напишите функцию, которая разворачивает массив 
+// в обратном порядке.
+//   * Ожидаемый результат: [1, 2, 3] => [3, 2, 1]
+
+// let mainArr = [1, 2, 3, 4, 5];
+// let mainArr2 = [];
+// function arr(array) {
+//     for (let i = 0; i < mainArr.length; i++) {
+//         mainArr2[i] = mainArr[(mainArr.length - 1) - i];
+//     }
+//     array = mainArr2;
+//     console.log(array);
+// }
+// arr(mainArr);
+
+
+// const anyNumber = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70];
+// for (let i = 0; i < anyNumber.length; i++) {
+//     console.log(`Index: ${i}, number: ${anyNumber[i]}`);
+// }
+
+// let max = anyNumber[0];
+// for (let i = 0; i < anyNumber.length; i++) {
+//     if (anyNumber[i] > max) {
+//         max = anyNumber[i];
+//     } else {}
+// }
+// console.log(max);
+
+// let max = 70;
+// for (let i = 0; i < anyNumber.length; i++) {
+//     if (anyNumber[i] === max) {
+//         console.log(i);
+//     } else {}
+// }
+
+
+// let user = [
+//     {
+//       name: "John",
+//       age: 30
+//     },
+//     {
+//       name: "Bob",
+//       age: 21
+//     },
+//     {
+//       name: "Anna",
+//       age: 19
+//     }
+// ];
+// // let obj = {};
+// // obj = user[1];
+// // console.log(obj);
+// for (let i = 0; i < user.length; i++) {
+//     if (user[i].name === 'Anna') {
+//         user[i];
+//     } else {
+//         continue;
+//     }
+// }
+// console.log(user);
+
+
+// const children = document.querySelector('.grid');
+// console.log(children);
+// const parents = children.parentElement;
+// console.log(parents);
+// for (let node of children) {
+//     if (node.nodeName == "#text") {
+//         continue;
+//     } else {
+//         console.log(node);
+//     }
+// // }
+// function factorial(n) {
+//     if (typeof(n) !== 'number' || isNaN(n) || n % 1 !== 0) {
+//         return 'Mistake!';
+//     } else if (n <= 0) {
+//         return 1;
+//     } else {
+//         return n * factorial(n - 1);
+//     }
+// }
+// console.log(factorial(2));
+
+
+// function factorial(n) {
+//     if (typeof(n) !== 'number' || !Number.isInteger(n)) {
+//         return "Ошибка, проверьте данные";
+//     } else if (n >= 1) {
+//         return n * factorial(n - 1);
+//     } else {
+//         return 1;
+//     }
+// }
+// console.log(factorial(5));
+
+// function factorial(n) {
+//     return n ? n * factorial(n - 1) : 1;
+// }
+
+// factorial(5);
+
+
+// function rFact(num){
+//     if (num === 1)
+//         return 1;
+//     else
+//         return num * rFact(num - 1);
+// }
+            
+// console.log(rFact(5));
+
+// function double(num1, num2) {
+//     if (num1 === 0 || num2 === 0) {
+//         return 0;
+//     } else {
+//         return num1 * num2;
+//     }
+// }
+// console.log(double(5, 10));
+
+// let result = '';
+// function strNumbers() {
+//     for (let i = 1; i <= 30; i++) {
+//         result += `${i} `;
+//     }
+// }
+// strNumbers();
+// console.log(result);
+
+// let i = 1;
+// let results = '';
+// function strNumber1() {
+//     results += `${i} `;
+//     i++;
+//     if (i > 30) {
+//         return;
+//     }
+//     strNumber1();
+// }
+// strNumber1();
+// console.log(results);
+
+
+// function randomInteger(min, max) {
+//     let rand = min + Math.random() * (max + 1 - min);
+//     return Math.floor(rand);
+// }
+
+// let result = 0;
+// let add = 0;
+// function social() {
+//     add = randomInteger(0, 100);
+//     console.log(`Дали: ${add}`);
+//     result += add;
+//     console.log(`Результат: ${result}`);
+//     if (result >= 300) {
+//         console.log('Мечта сбылась!');
+//         return;
+//     }
+//     social();
+// }
+// // social();
+
+
+// function sum2() {
+//     let result1 = 0;
+//     while (true) {
+//         let add1 = randomInteger(0, 100);
+//         console.log(`Дали: ${add1}`);
+//         result1 += add1;
+//         console.log(`Сумма: ${result1}`);
+//         if (result1 > 300) {
+//             console.log('Мечта сбылась!');
+//             return;
+//         }
+//     }
+// }
+// sum2();
+
+
+// const users = {
+//     'ivanov': {
+//         age: 25,
+//         parent: {
+//             'ivanov-a': {
+//                 age: 45
+//             },
+//             'ivanov-b': {
+//                 age: 43,
+//                 parent: {
+//                     'sergeev-a': {
+//                         age: 88,
+//                         parent: {
+//                             'lionenko': {}
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     },
+//     'kostenko': {
+//         age: 56,
+//         parent: {
+//             'ignatenko': {
+
+//             },
+//             'sniezko': {
+//                 age: 45
+//             }
+//         }
+//     }
+// };
+
+// function usersParent(obj) {
+//     if (obj.parent !== undefined) {
+//         for (let key in obj.parent) {
+//             console.log(key);
+//             usersParent(obj.parent[key]);
+//         }
+//     }
+// }
+// for (let key in users) {
+//     usersParent(users[key]);
+// }
+// function usersParent(obj) {
+//     if (obj.parent !== undefined) {
+//         for (let key in obj.parent) {
+//             console.log(key);
+//             usersParent(obj.parent[key]);
+//         }
+//     }
+// }
+// for (let key in users) {
+//     usersParent(users[key]);
+// }
+
+
+// let result = 1;
+// function factorial(num) {
+//     if (typeof(num) !== 'number' || num % 1 !== 0 || num === 0) {
+//         result = 'Введите правильное число!';
+//     } else if (num === 1) {
+//         return 1;
+//     } else {
+//         result = num * factorial(num - 1);
+//         return result;
+//     }
+// }
+// factorial(0);
+// console.log(result);
+
+window.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.btn'),
+    wrapper = document.querySelector('.wrapper');
+    
+
+    function myAnimation() {
+        
+        const box = document.querySelector('.box');
+        let pos = 0;
+        const id = setInterval(frame, 10);
+        function frame() {
+            if (pos === 300) {
+                clearInterval(id);
+            } else {
+                pos++;
+                box.style.top = pos + 'px';
+                box.style.left = pos + 'px';
+            }
+        }
+    }
+    btn.addEventListener('click', myAnimation());
+});
